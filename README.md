@@ -4,7 +4,7 @@ Este projeto tem como objetivo comparar o desempenho dos algoritmos de ordenaç�
 
 ## Relatório
 
-[📄 Ver Relatório](pbl04/src/report.pdf)
+[📄 Ver Relatório](src/report.pdf)
 
 ## Algoritmos Implementados
 
