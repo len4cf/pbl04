@@ -26,6 +26,30 @@ public class SortAlgorithms {
         }
     }
 
+    public static void swap(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
 
+    public static void quickSort(int[] array) {
+        quickSort(array, 0, array.length - 1);
+    }
+
+    public static void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int pivot = array[high];
+            int i = low - 1;
+            for (int j = low; j < high; j++) {
+                if (array[j] < pivot) {
+                    i++;
+                    swap(array, i, j);
+                }
+            }
+            swap(array, i + 1, high);
+            quickSort(array, low, i);
+            quickSort(array, i + 2, high);
+        }
+    }
 
 }

@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
         String[] arquivos = {
                 "aleatorio_100.csv", "aleatorio_1000.csv", "aleatorio_10000.csv",
                 "crescente_100.csv", "crescente_1000.csv", "crescente_10000.csv",
@@ -18,6 +19,7 @@ public class Main {
 
                 testAlgoritmo("Bubble Sort", dados, "bubble");
                 testAlgoritmo("Insertion Sort", dados, "insertion");
+                testAlgoritmo("Quick Sort", dados, "quick");
 
             } catch (IOException e) {
                 System.out.println("Erro ao ler o arquivo: " + arquivo);
@@ -62,6 +64,8 @@ public class Main {
             case "insertion":
                 SortAlgorithms.insertionSort(dados);
                 break;
+            case "quick":
+                SortAlgorithms.quickSort(dados);
         }
 
         long fim = System.nanoTime();
